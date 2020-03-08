@@ -14,6 +14,7 @@ class DetailsPage extends PureComponent {
   }
 
   async componentDidMount() {
+    // eslint-disable-next-line no-restricted-globals
     const movieId = replaceSpace(location.pathname.replace('/details/', ''));
     this.setState({
       movieId
@@ -29,10 +30,12 @@ class DetailsPage extends PureComponent {
   render() {
     return (
       <div className="DetailsPageContainer">
-        <Link to="/" className="homeButton">Home</Link>
-        <MovieDetails 
-          movieId={ this.state.movieId }
-          movieDetails={ this.state.movieDetails }
+        <Link to="/" className="homeButton">
+          Home
+        </Link>
+        <MovieDetails
+          movieId={this.state.movieId}
+          movieDetails={this.state.movieDetails}
         />
       </div>
     );

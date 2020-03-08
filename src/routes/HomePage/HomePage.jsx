@@ -12,7 +12,8 @@ class HomePage extends PureComponent {
       movieList: [],
       filteredList: [],
       filterType: 'year',
-      filterValue: 'all'
+      filterValue: 'all',
+      loading: true
     };
     this.setFilter = this.setFilter.bind(this);
   }
@@ -20,7 +21,8 @@ class HomePage extends PureComponent {
   async componentDidMount() {
     const getMovie = await movieApi.getMovies();
     this.setState({
-      movieList: getMovie
+      movieList: getMovie,
+      loading: false
     });
     this.setState({
       filteredList: this.state.movieList
@@ -70,11 +72,17 @@ class HomePage extends PureComponent {
         ))
       );
 
+    const loadingMovies = this.state.loading ? (
+      <h2>Loading Movies ....</h2>
+    ) : (
+      renderedMovies
+    );
+
     return (
       <div className="HomePageContainer">
         <h1 className="Title">Movies</h1>
         <Filter onSetFilter={this.setFilter} />
-        <div className="movieTilesWrapper">{renderedMovies}</div>
+        <div className="movieTilesWrapper">{loadingMovies}</div>
       </div>
     );
   }
