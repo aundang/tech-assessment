@@ -1,0 +1,10 @@
+.AppLayoutContainer {
+
+  .content {
+    // background: yellow;
+
+    @media screen and (max-width: 768px) {
+      // background: red;
+    }
+  }
+};

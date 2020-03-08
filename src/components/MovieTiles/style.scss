@@ -1,0 +1,22 @@
+.tile {
+  padding: 15px;
+  min-height: 370px;
+  min-width: 250px;
+  max-width: 300px;
+  border: orange 2px solid;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 2px 4px 4px #b6b6b6;
+
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .image {
+    margin: 100px 0;
+  }
+};

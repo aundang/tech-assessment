@@ -1,0 +1,37 @@
+.HomePageContainer {
+  height: 100%;
+  width: auto;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .Title {
+    text-align: center;
+    color: orange;
+  }
+
+  .movieTilesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .link {
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+    border-radius: 15px;
+
+    :hover {
+      background: #fffcf9;
+    }
+  }
+  
+  a:hover, a:visited, a:link, a:active
+  {
+      text-decoration: none;
+      color: black;
+  }
+}

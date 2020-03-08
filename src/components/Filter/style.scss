@@ -1,0 +1,13 @@
+.filterWrapper {
+  height: 30px;
+  width: 350px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+
+  .button {
+    height: 20px;
+    cursor: pointer;
+  }
+}
